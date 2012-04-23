@@ -10,3 +10,8 @@ map <f9> :make
 set cindent
 set foldmethod=syntax
 set path=.,../include,,**
+
+autocmd vimenter * NERDTree
+autocmd VimEnter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
